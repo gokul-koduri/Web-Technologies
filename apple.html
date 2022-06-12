@@ -1,0 +1,41 @@
+<html>
+   <head>  
+   <script text="text/javascript">
+   var price=0;
+   function buyApple() {
+       price+=59;
+   }
+   function buyOrange() {
+       price+=49;
+   }
+   function buyBanana() {
+       price+=39;
+   }
+   function TotalPrice() {
+       var total;
+       total=price+price*0.05;
+       alert("Total price of selected fruit is: "+total+" cents");
+   }
+   </script>
+   </head>
+   <body>
+       <form>
+      
+       <table align="center" border="2">
+           <caption>Select Fruits</caption>
+           <tr>
+               <td><input type="checkbox" onclick="buyApple()" />Apple</td>
+           </tr>
+           <tr>
+               <td><input type="checkbox" onclick="buyOrange()" />Orange</td>
+           </tr>
+           <tr>
+               <td><input type="checkbox" onclick="buyBanana()" />Banana</td>
+           </tr>
+           <tr>
+               <td align="center"><button onclick="TotalPrice()">Total</button></td>
+           </tr>
+       </table>
+       </form>
+   </body>
+</html>

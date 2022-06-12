@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<script>
+function validateForm() {
+let u_name = document.forms["myForm"]["username"].value;
+
+if (u_name=""||u_name.length<8||u_name[0].toUpperCase()!==u_name[0])
+{
+alert("Ensure that username is atleast 8 characters and first character of the user name is capital");
+return false;
+}
+let pass = document.forms["myForm"]["password"].value;
+if(pass=""||pass.length<6)
+{
+alert("Enter password of atleast 6 characters");
+return false;
+}
+if(document.getElementById('male').checked == false && document.getElementById('female').checked == false && document.getElementById('other').checked == false)
+{
+alert("Select atleast one of the 3 categories of Gender");
+}
+var selectmenu = document.getElementById("subject_menu");
+if(selectmenu.value == ""){
+alert("Select a subject");
+return false;
+}
+}
+</script>
+<meta charset="utf-8">
+<title>19BCD7006</title>
+<style>.bold{
+font-weight: bold;
+}
+.color{
+color: red;
+}
+</style>
+</head>
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+<h1 style="color: red"><center style="font-style: italic">19BCD7006</center></h1>
+<body style="background-color: lightgreen">
+<div class="color">
+<label for="name"><b>User Name:</b></label>
+
+<input type="text" id="name" name="username"><br><br>
+<label for="password">Password:</label>
+<input type="password" id="password" name="password"><br><br>
+<label>     
+Course :    
+</label>     
+<select>    
+<option value="Course">Course</option>    
+<option value="BCA">BCA</option>    
+<option value="BBA">BBA</option>    
+<option value="B.Tech">B.Tech</option>    
+<option value="MBA">MBA</option>    
+<option value="MCA">MCA</option>    
+<option value="M.Tech">M.Tech</option>    
+</select>    
+<br>    
+<label for="gender"> <b>Select you gender</b></label><br>
+<input type="radio" id="male" name="male" value="male">
+
+
+
+<label for="male">male</label><br>
+<input type="radio" id="female" name="female" value="female">
+<label for="female"><b>female</b></label><br>
+<input type="radio" id="other" name="other" value="other">
+<label for="other">Other</label><br>
+<label>  
+Hobbies:  
+</label>    
+<br>    
+<input type="checkbox" name="Programming"> Programming <br>    
+<input type="checkbox" name="Cricket"> Cricket <br>    
+<input type="checkbox" name="Football"> Football  <br>   
+<input type="checkbox" name="reading Novel"> Reading Novel  <br>   
+<br>    
+<br>   
+<br>
+<label for="w3review"><b>Enter your Comments:</b></label>
+<textarea id="remarks" name="remarks" rows="4" cols="50">
+</textarea><br><br>
+>
+</select> <br><br></div>
+<button type="submit" value="Submit">Submit</button>
+<button type="reset" value="Reset">Reset</button>
+</form>
+</body>
+</html>
